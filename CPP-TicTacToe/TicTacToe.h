@@ -48,7 +48,13 @@ public:
 				else std::cout << "\nPlayer 1 wins!\n"; // Same here
 				return 1;
 			}
+			
 
+		}
+		
+		if ((GetBoard(0) != ' ') && (GetBoard(1) != ' ') && (GetBoard(2) != ' ') && (GetBoard(3) != ' ') && (GetBoard(4) != ' ') && (GetBoard(5) != ' ') && (GetBoard(6) != ' ') && (GetBoard(7) != ' ') && (GetBoard(8) != ' ')) {
+			std::cout << "\nIts a tie!!\n";
+			return 1;
 		}
 
 		return 0;
@@ -90,7 +96,7 @@ public:
 		//This function should display the current state of the game to the console window. 
 		//You should display the board with the current marks of each player, and indicate whose turn it is.
 		system("cls");
-		std::cout << "\nPlayer " << GetPlayer();
+		std::cout << "\nPlayer " << (GetPlayer() + 1);
 		for (int i = 0; i < 9; i++) {
 			if (i % 3 == 0) {
 				std::cout << "\n";
